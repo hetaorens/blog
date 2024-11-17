@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    // Docsify Configuration
+    window.$docsify = {
+      name: 'blog',
+      repo: 'https://github.com/hetaorens/blog',
+      coverpage: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      notFoundPage: true,
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      mermaidConfig: {
+      querySelector: ".mermaid",
+    }
+
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/d3@7"></script>
+<!-- Import Mermaid -->
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true });
+  window.mermaid = mermaid;
+</script>
+<!-- Import Docsify-mermaid-zoom -->
+<script src="//unpkg.com/docsify-mermaid@2.0.0/dist/docsify-mermaid.js"></script>
+<script src="//unpkg.com/docsify-mermaid-zoom/dist/docsify-mermaid-zoom.js"></script>
+
+</body>
+
+</html>
